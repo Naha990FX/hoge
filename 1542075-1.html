@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>情報リテラシ　第1回レポート</title>
+
+<style>
+strong {
+	border-bottom: 2px solid red;
+	font-size: 110%;
+}
+
+#element11 { opacity:1; background-color: #2ca9e1; }
+#element12 { opacity:0.5; background-color: #2ca9e1; }
+
+#element21 { font-size: 100px; }
+
+#element31 { letter-spacing: 10px; }
+
+#element41 {
+	width: 500px;
+	height: 200px;
+	background: linear-gradient(blue,red);
+}
+
+#element51 {
+	width: 500px;
+	height: 50px;
+	background-color: #f00;
+	box-shadow: 10px 10px 10px;
+}
+</style>
+
+</head>
+<body>
+
+<h1>情報リテラシ　第1回レポート</h1>
+
+<p>学生番号：1542075　名前：田畑凌弥</p>
+
+
+
+<h2>HTML要素</h2>
+
+
+<h3>mark要素</h3>
+
+<p>mark要素は、文書内の該当テキストを目立たせる要素である。ハイライト部分はmark要素で指定する。具体的な書き方は以下の通りである。</p>
+<pre>&lt;mark&gt;ハイライト表示&lt;/mark&gt;</pre>
+
+<p>ブラウザ上では下のように表示される。</p>
+
+<p><mark>ハイライト表示</mark></p>
+
+
+<h3>progress要素</h3>
+
+<p>progress要素は、タスク完了までの進行状況を示す要素である。具体的な書き方は以下の通りである。</p>
+
+<pre>&lt;progress&gt;&lt;/progress&gt;</pre>
+
+<p>ブラウザ上では下のように表示される。</p>
+
+<p><progress></progress></p>
+
+<p>またvalue(現在値)とmax(最大値)を使って、現在の進捗状況を示すことも出来る。</p>
+
+<pre>&lt;progress value="50" max="100"&gt;&lt;/progress&gt;</pre>
+<pre>&lt;progress value="100" max="100"&gt;&lt;/progress&gt;</pre>
+
+<p>ブラウザ上では下のように表示される。</p>
+
+<p><progress value="50" max="100"></progress> </p>
+<p><progress value="100" max="100"></progress> </p>
+
+
+<h3>del要素</h3>
+
+<p>del要素は、後から削除された部分であることを示す要素である。具体的な書き方は以下の通りである。</p>
+
+<pre>&lt;del&gt;今週末は晴れるでしょう。&lt;/del&gt;</pre>
+
+<p>ブラウザ上では下のように表示される。</p>
+
+<p><del>今週末は晴れるでしょう。</del>低気圧の影響で天気は崩れるようです。(12月20日追記)</p>
+
+
+<h3>q要素</h3>
+
+<p>q要素は、その内容が引用であることを示す要素である。短い引用の際に使い、長文になる場合はblockquote要素を用いる。具体的な書き方は以下の通りである。</p>
+
+<pre>&lt;q&gt;短い引用&lt;/q&gt;</pre>
+
+<p>ブラウザ上では下のように表示される。</p>
+
+<p><q>短い引用</q></p>
+
+
+<h3>sup要素</h3>
+
+<p>sup要素は、上付け文字を表現するための要素である。具体的な書き方は以下の通りである。</p>
+
+<pre>2&lt;sup&gt;10&lt;/sup&gt; = 1024</pre>
+
+<p>ブラウザ上では下のように表示される。</p>
+
+<p>2<sup>10</sup> = 1024</p>
+
+
+
+<h2>CSSプロパティ</h2>
+
+
+<h3>opacityプロパティ</h3>
+
+<p>opacityプロパティは、要素の透明度を指定するためのプロパティである。</p>
+
+<p id="element11">透明度1</p>
+<p id="element12">透明度0.5</p>
+
+<p>これは、「<code>&lt;p id="element12"&gt;透明度0.5&lt;/p&gt;</code>」という要素に対して、「<code>#element12 { <strong>opacity:0.5; background-color: #2ca9e1;</strong> }</code>」というスタイルを指定した結果である。</p>
+
+
+<h3>font-sizeプロパティ</h3>
+
+<p>font-sizeプロパティは、フォントのサイズを指定するためのプロパティである。</p>
+
+<p id="element21">100px</p>
+
+<p>これは、「<code>&lt;p id="element21"&gt;100px&lt;/p&gt;</code>」という要素に対して、「<code>#element21 { <strong>font-size: 100px;</strong> }</code>」というスタイルを指定した結果である。</p>
+
+
+<h3>letter-spacingプロパティ</h3>
+
+<p>letter-spacingプロパティは、文字と文字の感覚を広げるプロパティである。</p>
+
+<p id="element31">文字間を広げることができる</p>
+
+<p>これは、「<code>&lt;p id="element31"&gt;文字間を広げることができる&lt;/p&gt;</code>」という要素に対して、「<code>#element31 { <strong>letter-spacing: 10px;</strong> }</code>」というスタイルを指定した結果である。</p>
+
+
+<h3>linear-gradientプロパティ</h3>
+
+<p>linear-gradientプロパティは、グラデーションを表示させるプロパティである。</p>
+
+<div id="element41"></div>
+
+<p>これは、「<code>&lt;div id="element41"&gt;&lt;/div&gt;</code>」という要素に対して、以下のようにスタイルを指定した結果である。</p>
+
+<pre>
+#element41 {
+	width: 500px;
+	height: 200px;
+	<strong>background: linear-gradient(blue,red);</strong>
+}
+</pre>
+
+
+<h3>text-shadowプロパティ</h3>
+
+<p>text-shadowプロパティは、ボックスに影をつけるためのプロパティである。</p>
+
+<div id="element51"></div>
+
+<p>これは、「<code>&lt;div id="element51"&gt;箱に影がつく&lt;/div&gt;</code>」という要素に対して、「以下のようにスタイルを指定した結果である。</p>
+
+<pre>
+#element51 {
+	width: 500px;
+	height: 50px;
+	background-color: red;
+	<strong>box-shadow: 10px 10px 10px;</strong>
+}
+</pre>
+
+</body>
+</html>
